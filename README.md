@@ -11,22 +11,25 @@ This project uses several essential tools to facilitate the digital chip design 
 1. **Yosys**:  
    Yosys is an open-source framework for RTL synthesis. It converts RTL code (written in Verilog or VHDL) into a gate-level netlist and provides optimization features to meet timing and area constraints.
 
-   **Installation Steps**:
+   <details>
+      <summary>Installation Steps:</summary>
 
-   ```bash
-   sudo apt-get update
-   git clone https://github.com/YosysHQ/yosys.git
-   cd yosys
-   sudo apt install make  # If make is not installed, please install it
-   sudo apt-get install build-essential clang bison flex \
-       libreadline-dev gawk tcl-dev libffi-dev git \
-       graphviz xdot pkg-config python3 libboost-system-dev \
-       libboost-python-dev libboost-filesystem-dev zlib1g-dev
-   make config-gcc
-   make 
-   sudo make install
-   ```
+      ```bash
+      sudo apt-get update
+      git clone https://github.com/YosysHQ/yosys.git
+      cd yosys
+      sudo apt install make  # If make is not installed, please install it
+      sudo apt-get install build-essential clang bison flex \
+         libreadline-dev gawk tcl-dev libffi-dev git \
+         graphviz xdot pkg-config python3 libboost-system-dev \
+         libboost-python-dev libboost-filesystem-dev zlib1g-dev
+      make config-gcc
+      make 
+      sudo make install
+     ```
 
+   </details>  
+   
 2. **Icarus Verilog (Iverilog)**:  
    Iverilog is a free and open-source Verilog simulation tool. It allows for compiling and simulating Verilog code, making it an essential tool for functional verification of RTL designs.
 
