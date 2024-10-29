@@ -29,23 +29,61 @@ This project uses several essential tools to facilitate the digital chip design 
      ```
 
    </details>  
-   
+
 2. **Icarus Verilog (Iverilog)**:  
    Iverilog is a free and open-source Verilog simulation tool. It allows for compiling and simulating Verilog code, making it an essential tool for functional verification of RTL designs.
 
-   **Installation Steps**:
+   <details>
+      <summary>Installation Steps:</summary>
 
    ```bash
    sudo apt-get update
    sudo apt-get install iverilog
    ```
 
+   </details>
+
 3. **GTKWave**:  
    GTKWave is an open-source waveform viewer used for analyzing simulation results. It helps visualize signals and detect issues in the timing and functionality of the design.
 
-   **Installation Steps**:
+   <details>
+      <summary>Installation Steps:</summary>
 
    ```bash
    sudo apt-get update
    sudo apt install gtkwave
    ```
+
+   </details>
+
+## Synthesis
+
+Synthesis in digital VLSI design is the process of translating high-level hardware description language (HDL) code, often in RTL (Register Transfer Level) form, into a gate-level netlist. This netlist represents the circuit in terms of basic logic gates and components. Synthesis tools ensure that the design meets specific constraints, such as timing, area, and power, to facilitate the physical implementation.
+
+### Simulation to Verify RTL
+
+RTL simulation is the initial step to validate the functionality of the RTL code. This process uses testbenches to simulate the behavior of the RTL design, ensuring it functions as expected before synthesis. RTL simulation helps identify and correct logical and functional issues, enabling designers to confirm that the design meets requirements.
+
+   <details>
+      <summary>Labs:</summary>
+
+   </details>
+
+### Logic Synthesis
+
+Logic synthesis is the process of converting RTL into a gate-level representation by mapping logic elements to actual hardware gates. Synthesis tools use timing, power, and area constraints to optimize the design, generating a netlist that adheres to the design's specifications. This netlist is essential for subsequent stages, such as placement and routing.
+
+   <details>
+      <summary>Labs:</summary>
+
+   </details>
+
+### Understanding .lib Files
+
+Library files (often with the .lib extension) provide the synthesis tool with details about the available cells and components in a particular technology. These files include specifications like timing, power consumption, and area for each cell type. The synthesis tool uses this information to make decisions that optimize the design within the constraints provided.
+
+   <details>
+      <summary>Labs:</summary>
+
+   </details>
+
