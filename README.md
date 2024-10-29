@@ -65,7 +65,7 @@ Synthesis in digital VLSI design is the process of translating high-level hardwa
 RTL simulation is the initial step to validate the functionality of the RTL code. This process uses testbenches to simulate the behavior of the RTL design, ensuring it functions as expected before synthesis. RTL simulation helps identify and correct logical and functional issues, enabling designers to confirm that the design meets requirements.
 
    <details>
-      <summary>Labs:</summary>
+      <summary>Implementation using GTKwave</summary>
 
    </details>
 
@@ -74,7 +74,7 @@ RTL simulation is the initial step to validate the functionality of the RTL code
 Logic synthesis is the process of converting RTL into a gate-level representation by mapping logic elements to actual hardware gates. Synthesis tools use timing, power, and area constraints to optimize the design, generating a netlist that adheres to the design's specifications. This netlist is essential for subsequent stages, such as placement and routing.
 
    <details>
-      <summary>Labs:</summary>
+      <summary>Implementation using Yosys</summary>
 
    </details>
 
@@ -83,7 +83,47 @@ Logic synthesis is the process of converting RTL into a gate-level representatio
 Library files (often with the .lib extension) provide the synthesis tool with details about the available cells and components in a particular technology. These files include specifications like timing, power consumption, and area for each cell type. The synthesis tool uses this information to make decisions that optimize the design within the constraints provided.
 
    <details>
-      <summary>Labs:</summary>
+      <summary>Inside SCL180</summary>
+
+   </details>
+
+Here’s a more concise version of the sections:
+
+---
+
+### Hierarchical vs. Flat Synthesis
+
+**Hierarchical Synthesis**  
+In hierarchical synthesis, the design is divided into separate modules, each synthesized individually. This approach is ideal for large designs, as it reduces memory usage and synthesis time by focusing on each module independently. It supports modularity and simplifies debugging since changes can be made to specific modules without re-synthesizing the entire design.
+
+   <details>
+      <summary>Implementation using Yosys</summary>
+
+   </details>
+
+**Flat Synthesis**  
+Flat synthesis treats the design as a single block, synthesizing everything together. This can yield more optimized results in terms of area and speed, but it’s resource-intensive and impractical for large designs. Flat synthesis works best for smaller circuits where global optimizations can provide performance benefits.
+
+   <details>
+      <summary>Implementation using Yosys</summary>
+
+   </details>
+
+### Synthesising and simulating Flops
+
+**What are Flops?**  
+Flip-flops (flops) are sequential elements that store binary data based on a clock signal’s edge. They form the building blocks for registers, counters, and other timing-dependent components.
+
+**Importance of Flops**  
+Flops are essential for stable, clock-synchronized data storage and transfer, critical to maintaining timing consistency across a design. They also enable pipelining for performance optimization. Proper placement of flops during synthesis is crucial for meeting timing requirements and minimizing power consumption.
+
+   <details>
+      <summary>Flops Simulation</summary>
+
+   </details>
+
+   <details>
+      <summary>Flops Synthesis</summary>
 
    </details>
 
