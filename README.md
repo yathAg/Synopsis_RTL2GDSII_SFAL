@@ -87,10 +87,6 @@ Library files (often with the .lib extension) provide the synthesis tool with de
 
    </details>
 
-Here’s a more concise version of the sections:
-
----
-
 ### Hierarchical vs. Flat Synthesis
 
 **Hierarchical Synthesis**  
