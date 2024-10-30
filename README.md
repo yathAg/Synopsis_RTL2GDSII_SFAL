@@ -15,10 +15,8 @@ This project uses several essential tools to facilitate the digital chip design 
       <summary> 🛠️Installation Steps:</summary>
 
       ```bash
-      sudo apt-get update
       git clone https://github.com/YosysHQ/yosys.git
       cd yosys
-      sudo apt install make  # If make is not installed, please install it
       sudo apt-get install build-essential clang bison flex \
          libreadline-dev gawk tcl-dev libffi-dev git \
          graphviz xdot pkg-config python3 libboost-system-dev \
@@ -37,7 +35,6 @@ This project uses several essential tools to facilitate the digital chip design 
       <summary> 🛠️Installation Steps:</summary>
 
    ```bash
-   sudo apt-get update
    sudo apt-get install iverilog
    ```
 
@@ -50,7 +47,6 @@ This project uses several essential tools to facilitate the digital chip design 
       <summary> 🛠️Installation Steps:</summary>
 
    ```bash
-   sudo apt-get update
    sudo apt install gtkwave
    ```
 
@@ -169,7 +165,7 @@ Flat synthesis treats the design as a single block, synthesizing everything toge
 <details>
 <summary> 🛠️Implementation using Yosys</summary>
 
-The flatten command in Yosys converts the design to a flat structure, eliminating all hierarchy. This transformation can be seen in the example below, where the figures illustrate the loss of hierarchy in the flattened design.
+The `flatten` command in Yosys converts the design to a flat structure, eliminating all hierarchy. This transformation can be seen in the example below, where the figures illustrate the loss of hierarchy in the flattened design.
 ![Alt text](<_docs/synthesisP3_3.png>)
 ![Alt text](<_docs/synthesisP3_4.png>)
 
@@ -183,12 +179,30 @@ Flip-flops (flops) are sequential elements that store binary data based on a clo
 **Importance of Flops**  
 Flops are essential for stable, clock-synchronized data storage and transfer, critical to maintaining timing consistency across a design. They also enable pipelining for performance optimization. Proper placement of flops during synthesis is crucial for meeting timing requirements and minimizing power consumption.
 
-   <details>
-      <summary> 🛠️Flops Simulation</summary>
+<details>
+<summary> 🛠️Flops Simulation</summary>
 
-   </details>
+**Synchronous vs. Asynchronous Flip-Flops**  
 
-   <details>
-      <summary> 🛠️Flops Synthesis</summary>
+- **Synchronous Flip-Flops**: These flip-flops change state only in response to a clock signal, making them ideal for designs where timing control is critical. All data transitions are aligned to the clock, ensuring predictable behavior.
+- **Asynchronous Flip-Flops**: These flip-flops can change state independently of the clock, triggered directly by inputs. While they allow faster responses to changes, they can introduce timing uncertainty, making them suitable for specific cases like asynchronous resets.
 
-   </details>
+**Set-Reset Flip-Flops**  
+
+- Set/reset flip-flops have dedicated **set** or **reset** inputs to force the output to a high (set) or low (reset) state, overriding other inputs. These are useful for initializing states or enforcing specific conditions at any time during operation.
+
+Below is a screenshot showing RTL code examples of these flip-flops and their corresponding simulation waveforms.
+![Alt text](_docs/synthesisP4_0.png)
+Synchronous reset
+![Alt text](_docs/synthesisP4_3.png)
+Asynchronous reset
+![Alt text](_docs/synthesisP4_1.png)
+Asynchronous set
+![Alt text](_docs/synthesisP4_2.png)
+
+</details>
+
+<details>
+<summary> 🛠️Flops Synthesis</summary>
+
+</details>
