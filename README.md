@@ -67,6 +67,34 @@ RTL simulation is the initial step to validate the functionality of the RTL code
    <details>
       <summary>Implementation using GTKwave</summary>
 
+- **Prepare Verilog Files**
+   - Ensure you have:
+     - **Verilog source file** (`specfile.v`) — your design under test.
+     - **Testbench file** (`testbench.v`) — provides input stimulus and checks the output.
+
+- **Run Icarus Verilog**
+   - Use Icarus Verilog to compile your files and create an executable:
+     ```bash
+     iverilog <specfile.v> <testbench.v>
+     ```
+   - This produces an `a.out` executable file.
+
+- **Execute Simulation to Generate a VCD File**
+   - Run the `a.out` file to generate a **Value Change Dump (VCD)** file:
+     ```bash
+     ./a.out
+     ```
+   - This creates `file.vcd`, which stores signal changes over time.
+
+- **View Simulation in GTKWave**
+   - Open the `.vcd` file in GTKWave to analyze the simulation:
+     ```bash
+     gtkwave file.vcd
+     ```
+   - Inspect signal waveforms and verify design functionality in GTKWave.
+
+![Alt text](<_docs/synthesisP1_1.png>)
+
    </details>
 
 ### Logic Synthesis
