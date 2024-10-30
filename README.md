@@ -12,7 +12,7 @@ This project uses several essential tools to facilitate the digital chip design 
    Yosys is an open-source framework for RTL synthesis. It converts RTL code (written in Verilog or VHDL) into a gate-level netlist and provides optimization features to meet timing and area constraints.
 
    <details>
-      <summary>Installation Steps:</summary>
+      <summary> 🛠️Installation Steps:</summary>
 
       ```bash
       sudo apt-get update
@@ -34,7 +34,7 @@ This project uses several essential tools to facilitate the digital chip design 
    Iverilog is a free and open-source Verilog simulation tool. It allows for compiling and simulating Verilog code, making it an essential tool for functional verification of RTL designs.
 
    <details>
-      <summary>Installation Steps:</summary>
+      <summary> 🛠️Installation Steps:</summary>
 
    ```bash
    sudo apt-get update
@@ -47,7 +47,7 @@ This project uses several essential tools to facilitate the digital chip design 
    GTKWave is an open-source waveform viewer used for analyzing simulation results. It helps visualize signals and detect issues in the timing and functionality of the design.
 
    <details>
-      <summary>Installation Steps:</summary>
+      <summary> 🛠️Installation Steps:</summary>
 
    ```bash
    sudo apt-get update
@@ -65,7 +65,7 @@ Synthesis in digital VLSI design is the process of translating high-level hardwa
 RTL simulation is the initial step to validate the functionality of the RTL code. This process uses testbenches to simulate the behavior of the RTL design, ensuring it functions as expected before synthesis. RTL simulation helps identify and correct logical and functional issues, enabling designers to confirm that the design meets requirements.
 
    <details>
-      <summary>Implementation using GTKwave</summary>
+      <summary> 🛠️Implementation using GTKwave</summary>
 
 - **Prepare Verilog Files**
    - Ensure you have:
@@ -102,18 +102,52 @@ RTL simulation is the initial step to validate the functionality of the RTL code
 Logic synthesis is the process of converting RTL into a gate-level representation by mapping logic elements to actual hardware gates. Synthesis tools use timing, power, and area constraints to optimize the design, generating a netlist that adheres to the design's specifications. This netlist is essential for subsequent stages, such as placement and routing.
 
    <details>
-      <summary>Implementation using Yosys</summary>
+      <summary> 🛠️Implementation using Yosys</summary>
 
+- **Load the Library**
+   - Load the standard cell library to define available cells for synthesis:
+     ```bash
+     read_liberty -lib <library_path>/<library_file>.lib
+     ```
+
+- **Load the RTL Design**
+   - Load your Verilog RTL design file:
+     ```bash
+     read_verilog <design_file>.v
+     ```
+
+- **Declare the Top Module**
+   - Specify the top-level module to be synthesized:
+     ```bash
+     synth -top <top_module_name>
+     ```
+
+- **Run the Synthesis**
+   - Perform the synthesis step, mapping the design to the cells in the library:
+     ```bash
+     abc -liberty <library_path>/<library_file>.lib
+     ```
+
+- **Generate the Netlist Verilog File**
+   - Write the synthesized design to a Verilog file. Use `-noattr` to avoid additional attributes:
+     ```bash
+     write_verilog -noattr <output_netlist_file>.v
+     ```
+![Alt text](<_docs/synthesisP2_1.png>)
+- **View the Output Summary**
+   - A summary of the synthesis results, including details on used cells and wiring, will be displayed.
+
+- **View Flow Chart of Cells and Wires**
+   - Use the `show` command to generate a flow chart of the synthesized design:
+
+![Alt text](<_docs/synthesisP2_2.png>)
    </details>
 
 ### Understanding .lib Files
 
-Library files (often with the .lib extension) provide the synthesis tool with details about the available cells and components in a particular technology. These files include specifications like timing, power consumption, and area for each cell type. The synthesis tool uses this information to make decisions that optimize the design within the constraints provided.
+Library files (often with the .lib extension) provide the synthesis tool with detailed specifications about the cells and components available in a particular technology. These files define the characteristics of each cell type, including timing, power consumption, and area, which the synthesis tool uses to optimize the design according to specified constraints.
 
-   <details>
-      <summary>Inside SCL180</summary>
-
-   </details>
+A .lib file typically includes multiple variants of logic gates to meet different performance requirements. For example, fast and slow cells are included to satisfy the setup and hold timing constraints, respectively. Faster cells drive more current to quickly charge and discharge the capacitive load in a circuit, achieving low delay. However, this increased speed comes at the cost of greater area and power usage, as faster cells require wider transistors. The synthesis tool selects appropriate cells based on the design’s needs, balancing speed, area, and power to meet timing requirements effectively.
 
 ### Hierarchical vs. Flat Synthesis
 
@@ -121,7 +155,7 @@ Library files (often with the .lib extension) provide the synthesis tool with de
 In hierarchical synthesis, the design is divided into separate modules, each synthesized individually. This approach is ideal for large designs, as it reduces memory usage and synthesis time by focusing on each module independently. It supports modularity and simplifies debugging since changes can be made to specific modules without re-synthesizing the entire design.
 
    <details>
-      <summary>Implementation using Yosys</summary>
+      <summary> 🛠️Implementation using Yosys</summary>
 
    </details>
 
@@ -129,7 +163,7 @@ In hierarchical synthesis, the design is divided into separate modules, each syn
 Flat synthesis treats the design as a single block, synthesizing everything together. This can yield more optimized results in terms of area and speed, but it’s resource-intensive and impractical for large designs. Flat synthesis works best for smaller circuits where global optimizations can provide performance benefits.
 
    <details>
-      <summary>Implementation using Yosys</summary>
+      <summary> 🛠️Implementation using Yosys</summary>
 
    </details>
 
@@ -142,12 +176,12 @@ Flip-flops (flops) are sequential elements that store binary data based on a clo
 Flops are essential for stable, clock-synchronized data storage and transfer, critical to maintaining timing consistency across a design. They also enable pipelining for performance optimization. Proper placement of flops during synthesis is crucial for meeting timing requirements and minimizing power consumption.
 
    <details>
-      <summary>Flops Simulation</summary>
+      <summary> 🛠️Flops Simulation</summary>
 
    </details>
 
    <details>
-      <summary>Flops Synthesis</summary>
+      <summary> 🛠️Flops Synthesis</summary>
 
    </details>
 
