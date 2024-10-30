@@ -154,18 +154,26 @@ A .lib file typically includes multiple variants of logic gates to meet differen
 **Hierarchical Synthesis**  
 In hierarchical synthesis, the design is divided into separate modules, each synthesized individually. This approach is ideal for large designs, as it reduces memory usage and synthesis time by focusing on each module independently. It supports modularity and simplifies debugging since changes can be made to specific modules without re-synthesizing the entire design.
 
-   <details>
-      <summary> 🛠️Implementation using Yosys</summary>
+<details>
+<summary> 🛠️Implementation using Yosys</summary>
 
-   </details>
+By default, synthesizing a top-level module in Yosys employs hierarchical synthesis, where the hierarchy in the generated netlist is maintained. This can be observed in the example below, where both the block diagram and the generated netlist showcase the preserved module hierarchy.
+![Alt text](<_docs/synthesisP3_1.png>)
+![Alt text](<_docs/synthesisP3_2.png>)
+
+</details>
 
 **Flat Synthesis**  
 Flat synthesis treats the design as a single block, synthesizing everything together. This can yield more optimized results in terms of area and speed, but it’s resource-intensive and impractical for large designs. Flat synthesis works best for smaller circuits where global optimizations can provide performance benefits.
 
-   <details>
-      <summary> 🛠️Implementation using Yosys</summary>
+<details>
+<summary> 🛠️Implementation using Yosys</summary>
 
-   </details>
+The flatten command in Yosys converts the design to a flat structure, eliminating all hierarchy. This transformation can be seen in the example below, where the figures illustrate the loss of hierarchy in the flattened design.
+![Alt text](<_docs/synthesisP3_3.png>)
+![Alt text](<_docs/synthesisP3_4.png>)
+
+</details>
 
 ### Synthesising and simulating Flops
 
@@ -184,4 +192,3 @@ Flops are essential for stable, clock-synchronized data storage and transfer, cr
       <summary> 🛠️Flops Synthesis</summary>
 
    </details>
-
