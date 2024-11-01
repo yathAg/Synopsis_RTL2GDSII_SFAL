@@ -52,10 +52,6 @@ This project uses several essential tools to facilitate the digital chip design 
 
    </details>
 
----
----
----
-
 ## Synthesis
 
 Synthesis in digital VLSI design is the process of translating high-level hardware description language (HDL) code, often in RTL (Register Transfer Level) form, into a gate-level netlist. This netlist represents the circuit in terms of basic logic gates and components. Synthesis tools ensure that the design meets specific constraints, such as timing, area, and power, to facilitate the physical implementation.
@@ -96,8 +92,6 @@ RTL simulation is the initial step to validate the functionality of the RTL code
 ![Alt text](<_docs/synthesisP1_1.png>)
 
    </details>
-
----
 
 ### Logic Synthesis
 
@@ -151,8 +145,6 @@ Library files (often with the .lib extension) provide the synthesis tool with de
 
 A .lib file typically includes multiple variants of logic gates to meet different performance requirements. For example, fast and slow cells are included to satisfy the setup and hold timing constraints, respectively. Faster cells drive more current to quickly charge and discharge the capacitive load in a circuit, achieving low delay. However, this increased speed comes at the cost of greater area and power usage, as faster cells require wider transistors. The synthesis tool selects appropriate cells based on the design’s needs, balancing speed, area, and power to meet timing requirements effectively.
 
----
-
 ### Hierarchical vs. Flat Synthesis
 
 **Hierarchical Synthesis**  
@@ -178,8 +170,6 @@ The `flatten` command in Yosys converts the design to a flat structure, eliminat
 ![Alt text](<_docs/synthesisP3_4.png>)
 
 </details>
-
----
 
 ### Synthesizing and simulating Flops
 
@@ -223,8 +213,6 @@ Synchronous reset : Note the interesting optimization in synthesized design
 ![Alt text](<_docs/synthesisP5_3.png>)
 </details>
 
----
-
 ### Optimizations in Digital Design
 
 **Combinational Logic Optimization**
@@ -239,8 +227,6 @@ Sequential logic optimization targets areas like unnecessary flip-flops and stat
 - **State Optimization**: Eliminates unused states to simplify the state machine.
 - **Cloning**: Reduces interconnect delays by duplicating a flip-flop whose output feeds multiple distant flops, placing each clone close to its destination.
 - **Re-timing**: Adjusts the placement of combinational logic between flip-flops, redistributing it to optimize the slack time and increase the maximum operating frequency.
-
----
 
 ### Gate-Level Simulation (GLS) and Simulation Mismatch
 
@@ -263,3 +249,4 @@ GLS is essential for:
    - **Blocking Statement Conflicts**: Misuse in conditional structures (e.g., `if`, `case`, `for`, `generate`) can lead to simulation and synthesis differences.
    - **Incomplete `If` Statements**: Missing cases in `if` conditions may cause unintended latches, complicating the synthesis outcome.
    - **Incomplete or Partial `Case` Statements**: Missing or overlapping conditions in `case` statements can similarly result in unintended latches or misinterpretations during synthesis.
+   
