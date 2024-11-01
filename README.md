@@ -171,7 +171,7 @@ The `flatten` command in Yosys converts the design to a flat structure, eliminat
 
 </details>
 
-### Synthesising and simulating Flops
+### Synthesizing and simulating Flops
 
 **What are Flops?**  
 Flip-flops (flops) are sequential elements that store binary data based on a clock signal’s edge. They form the building blocks for registers, counters, and other timing-dependent components.
@@ -205,4 +205,47 @@ Asynchronous set
 <details>
 <summary> 🛠️Flops Synthesis</summary>
 
+Asynchronous reset
+![Alt text](<_docs/synthesisP5_1.png>)
+Synchronous reset
+![Alt text](<_docs/synthesisP5_2.png>)
+Synchronous reset : Note the interesting optimization in synthesized design
+![Alt text](<_docs/synthesisP5_3.png>)
 </details>
+
+### Optimizations in Digital Design
+
+**Combinational Logic Optimization**
+
+Combinational logic can be optimized by identifying constant signals within the circuit, known as *constant propagation*, to simplify the design. Larger combinational circuits can further benefit from Boolean logic optimization or Karnaugh Maps (K-MAPS), reducing the complexity of logic expressions and enhancing efficiency.
+
+**Sequential Logic Optimization**
+
+Sequential logic optimization targets areas like unnecessary flip-flops and state reduction. For instance:
+
+- **Removal of Redundant Flip-Flops**: If a flip-flop’s output (Q) remains unchanged (e.g., when D is tied to 0 in an async reset), the flip-flop can be removed to streamline the circuit.
+- **State Optimization**: Eliminates unused states to simplify the state machine.
+- **Cloning**: Reduces interconnect delays by duplicating a flip-flop whose output feeds multiple distant flops, placing each clone close to its destination.
+- **Re-timing**: Adjusts the placement of combinational logic between flip-flops, redistributing it to optimize the slack time and increase the maximum operating frequency.
+
+### Gate-Level Simulation (GLS) and Simulation Mismatch
+
+**Gate-Level Simulation (GLS)** verifies the synthesized netlist against the design testbench by simulating with Verilog models of the logic gates. This post-synthesis step is crucial for validating that the design's timing and logical functionality align with expectations from the RTL description.
+
+**Why GLS?**
+
+GLS is essential for:
+
+- **Timing Verification**: Ensuring that the generated netlist meets timing constraints and performs as expected.
+- **Identifying Synthesis-RTL Mismatches**: Detecting discrepancies between the synthesized design and the original RTL.
+
+**Common Causes of Synthesis-RTL Mismatches**
+
+1. **Sensitivity List Issues**: In Verilog, an incomplete sensitivity list (missing signals that should trigger updates) can cause the simulator to overlook essential changes, resulting in incorrect behavior in simulation versus synthesis.
+
+2. **Blocking vs. Non-Blocking Assignments**: Improper use of blocking (`=`) and non-blocking (`<=`) assignments can lead to mismatches. Blocking assignments, which execute in sequence, can alter the design's intended functionality. For sequential logic, non-blocking assignments are preferred to avoid unintended ordering issues.
+
+3. **Other Sources of Mismatches**:
+   - **Blocking Statement Conflicts**: Misuse in conditional structures (e.g., `if`, `case`, `for`, `generate`) can lead to simulation and synthesis differences.
+   - **Incomplete `If` Statements**: Missing cases in `if` conditions may cause unintended latches, complicating the synthesis outcome.
+   - **Incomplete or Partial `Case` Statements**: Missing or overlapping conditions in `case` statements can similarly result in unintended latches or misinterpretations during synthesis.
