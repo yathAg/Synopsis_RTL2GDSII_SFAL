@@ -56,7 +56,7 @@ This project uses several essential tools to facilitate the digital chip design 
 
 Synthesis in digital VLSI design is the process of translating high-level hardware description language (HDL) code, often in RTL (Register Transfer Level) form, into a gate-level netlist. This netlist represents the circuit in terms of basic logic gates and components. Synthesis tools ensure that the design meets specific constraints, such as timing, area, and power, to facilitate the physical implementation.
 
-### Simulation to Verify RTL
+### ⭐ Simulation to Verify RTL
 
 RTL simulation is the initial step to validate the functionality of the RTL code. This process uses testbenches to simulate the behavior of the RTL design, ensuring it functions as expected before synthesis. RTL simulation helps identify and correct logical and functional issues, enabling designers to confirm that the design meets requirements.
 
@@ -93,7 +93,7 @@ RTL simulation is the initial step to validate the functionality of the RTL code
 
    </details>
 
-### Logic Synthesis
+### ⭐ Logic Synthesis
 
 Logic synthesis is the process of converting RTL into a gate-level representation by mapping logic elements to actual hardware gates. Synthesis tools use timing, power, and area constraints to optimize the design, generating a netlist that adheres to the design's specifications. This netlist is essential for subsequent stages, such as placement and routing.
 
@@ -139,13 +139,13 @@ Logic synthesis is the process of converting RTL into a gate-level representatio
 ![Alt text](<_docs/synthesisP2_2.png>)
    </details>
 
-### Understanding .lib Files
+### ⭐ Understanding .lib Files
 
 Library files (often with the .lib extension) provide the synthesis tool with detailed specifications about the cells and components available in a particular technology. These files define the characteristics of each cell type, including timing, power consumption, and area, which the synthesis tool uses to optimize the design according to specified constraints.
 
 A .lib file typically includes multiple variants of logic gates to meet different performance requirements. For example, fast and slow cells are included to satisfy the setup and hold timing constraints, respectively. Faster cells drive more current to quickly charge and discharge the capacitive load in a circuit, achieving low delay. However, this increased speed comes at the cost of greater area and power usage, as faster cells require wider transistors. The synthesis tool selects appropriate cells based on the design’s needs, balancing speed, area, and power to meet timing requirements effectively.
 
-### Hierarchical vs. Flat Synthesis
+### ⭐ Hierarchical vs. Flat Synthesis
 
 **Hierarchical Synthesis**  
 In hierarchical synthesis, the design is divided into separate modules, each synthesized individually. This approach is ideal for large designs, as it reduces memory usage and synthesis time by focusing on each module independently. It supports modularity and simplifies debugging since changes can be made to specific modules without re-synthesizing the entire design.
@@ -171,7 +171,7 @@ The `flatten` command in Yosys converts the design to a flat structure, eliminat
 
 </details>
 
-### Synthesizing and simulating Flops
+### ⭐ Synthesizing and simulating Flops
 
 **What are Flops?**  
 Flip-flops (flops) are sequential elements that store binary data based on a clock signal’s edge. They form the building blocks for registers, counters, and other timing-dependent components.
@@ -213,7 +213,7 @@ Synchronous reset : Note the interesting optimization in synthesized design
 ![Alt text](<_docs/synthesisP5_3.png>)
 </details>
 
-### Optimizations in Digital Design
+### ⭐ Optimizations in Digital Design
 
 **Combinational Logic Optimization**
 
@@ -228,7 +228,7 @@ Sequential logic optimization targets areas like unnecessary flip-flops and stat
 - **Cloning**: Reduces interconnect delays by duplicating a flip-flop whose output feeds multiple distant flops, placing each clone close to its destination.
 - **Re-timing**: Adjusts the placement of combinational logic between flip-flops, redistributing it to optimize the slack time and increase the maximum operating frequency.
 
-### Gate-Level Simulation (GLS) and Simulation Mismatch
+### ⭐ Gate-Level Simulation (GLS) and Simulation Mismatch
 
 **Gate-Level Simulation (GLS)** verifies the synthesized netlist against the design testbench by simulating with Verilog models of the logic gates. This post-synthesis step is crucial for validating that the design's timing and logical functionality align with expectations from the RTL description.
 
@@ -250,13 +250,13 @@ GLS is essential for:
    - **Incomplete `If` Statements**: Missing cases in `if` conditions may cause unintended latches, complicating the synthesis outcome.
    - **Incomplete or Partial `Case` Statements**: Missing or overlapping conditions in `case` statements can similarly result in unintended latches or misinterpretations during synthesis.
    
-### Synthesis Workflow with Synopsys Design Compiler
+### ⭐ Synthesis Workflow with Synopsys Design Compiler
 
 Design constraints play a vital role in guiding synthesis tools to select the most suitable cells, balancing timing, power, and area objectives. Synopsys Design Constraints (SDC) are used to provide these specifications to the design compiler, ensuring optimal implementation. SDC is an industry-standard format based on the TCL (Tool Command Language), and it encodes constraints in terms of timing, power, and area.
 
 > Design Compiler (DC) uses `.db` files rather than `.lib` files for processing standard cells.*
 
-### Synthesis Workflow
+### ⭐ Synthesis Workflow
 
 The typical workflow for synthesis in Design Compiler is as follows:
 
@@ -336,6 +336,6 @@ The typical workflow for synthesis in Design Compiler is as follows:
    ```
 </details>
 
-### Automating Tasks with `.synopsys_dc.setup`
+### ⭐ Automating Tasks with `.synopsys_dc.setup`
 
 The `.synopsys_dc.setup` file can be created in the user directory to store common setup commands and automate repetitive tasks. This file can include commands for setting up libraries, reading constraints, and configuring other essential options, streamlining the setup process for Design Compiler.
