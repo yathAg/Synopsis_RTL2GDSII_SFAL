@@ -1,4 +1,4 @@
-# Synopsis_RTL2GDSII_SFAL
+# Synopsis_RTL2GDSII
 
 Digital chip design transforms a high-level functional description into a manufacturable physical chip. The process follows key steps: starting with **specification**, followed by **RTL design** using hardware description languages like Verilog or VHDL, **verification**, **synthesis** into a gate-level netlist, **place and route (PnR)**, and final **timing, power, and physical verification** before the chip is ready for fabrication.
 
@@ -339,3 +339,15 @@ The typical workflow for synthesis in Design Compiler is as follows:
 ### ⭐ Automating Tasks with `.synopsys_dc.setup`
 
 The `.synopsys_dc.setup` file can be created in the user directory to store common setup commands and automate repetitive tasks. This file can include commands for setting up libraries, reading constraints, and configuring other essential options, streamlining the setup process for Design Compiler.
+
+### STA 
+
+setup constraints 
+ decides max delay
+
+hold constraints
+    decides min delay.
+
+delay depends on cell and fanout,
+
+timing archs
