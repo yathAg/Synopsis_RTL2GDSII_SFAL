@@ -250,3 +250,92 @@ GLS is essential for:
    - **Incomplete `If` Statements**: Missing cases in `if` conditions may cause unintended latches, complicating the synthesis outcome.
    - **Incomplete or Partial `Case` Statements**: Missing or overlapping conditions in `case` statements can similarly result in unintended latches or misinterpretations during synthesis.
    
+### Synthesis Workflow with Synopsys Design Compiler
+
+Design constraints play a vital role in guiding synthesis tools to select the most suitable cells, balancing timing, power, and area objectives. Synopsys Design Constraints (SDC) are used to provide these specifications to the design compiler, ensuring optimal implementation. SDC is an industry-standard format based on the TCL (Tool Command Language), and it encodes constraints in terms of timing, power, and area.
+
+> Design Compiler (DC) uses `.db` files rather than `.lib` files for processing standard cells.*
+
+### Synthesis Workflow
+
+The typical workflow for synthesis in Design Compiler is as follows:
+
+1. **Read Standard Cells and Technology Library (.lib)**  
+   Load the standard cells and technology libraries, which provide the cell-level information needed for synthesis.
+
+2. **Read the Design (Verilog and Design Library)**  
+   Import the design in Verilog format and link to the design library.
+
+3. **Read SDC Constraints**  
+   Apply the SDC file, which supplies timing, power, and area constraints to guide synthesis.
+
+4. **Link the Design**  
+   Link the design, ensuring that all modules and dependencies are properly resolved.
+
+5. **Synthesize the Design**  
+   Perform synthesis to optimize the design based on the constraints provided.
+
+6. **Generate Output Netlist and Reports**  
+   Export the synthesized netlist and generate relevant reports for timing, area, and power.
+
+<details>
+<summary> 🛠️Using Synopsys Design Compiler in Command Line </summary>
+
+1. Start the C-shell to set up the environment:
+   ```csh
+   csh
+   ```
+2. Launch Design Compiler shell:
+   ```csh
+   dc_shell
+   ```
+3. Import the required databases and libraries:
+   ```tcl
+   read_db <path_to_database>
+   set target_library <path_to_target_library>
+   set link_library [* <path_to_link_library>]
+   ```
+   > The `set link_library [* <path>]` option ensures that the library is not overwritten.
+
+4. Link the design:
+   ```tcl
+   link
+   ```
+5. Compile the design:
+   ```tcl
+   compile
+   ```
+6. Export the synthesized netlist in Verilog format:
+   ```tcl
+   write -format verilog -output <output_filename>.v
+   ```
+7. Export the synthesized design in DDC format:
+   ```tcl
+   write -format ddc -output <output_filename>.ddc
+   ```
+</details>
+
+<details>
+<summary> 🛠️Using Design Vision (GUI)</summary>
+
+1. Start C-shell:
+   ```csh
+   csh
+   ```
+2. Launch Design Vision GUI:
+   ```csh
+   design_vision
+   ```
+3. Initialize the GUI:
+   ```tcl
+   start_gui
+   ```
+4. Read the DDC file (if available):
+   ```tcl
+   read_ddc <design_name>.ddc
+   ```
+</details>
+
+### Automating Tasks with `.synopsys_dc.setup`
+
+The `.synopsys_dc.setup` file can be created in the user directory to store common setup commands and automate repetitive tasks. This file can include commands for setting up libraries, reading constraints, and configuring other essential options, streamlining the setup process for Design Compiler.
