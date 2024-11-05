@@ -342,5 +342,7 @@ The typical workflow for synthesis in Design Compiler is as follows:
 
 The `.synopsys_dc.setup` file can be created in the user directory to store common setup commands and automate repetitive tasks. This file can include commands for setting up libraries, reading constraints, and configuring other essential options, streamlining the setup process for Design Compiler.
 
+### TCL Scripting 
+
 
 [text](https://www.gibbard.me/tcl_script_cheatsheet/)
