@@ -313,6 +313,7 @@ The typical workflow for synthesis in Design Compiler is as follows:
    ```tcl
    write -format ddc -output <output_filename>.ddc
    ```
+![alt text](<Screenshot 2024-11-05 115211.png>)
 </details>
 
 <details>
@@ -334,8 +335,12 @@ The typical workflow for synthesis in Design Compiler is as follows:
    ```tcl
    read_ddc <design_name>.ddc
    ```
+   ![alt text](<Screenshot 2024-11-05 115133.png>)
 </details>
 
 ### ⭐ Automating Tasks with `.synopsys_dc.setup`
 
 The `.synopsys_dc.setup` file can be created in the user directory to store common setup commands and automate repetitive tasks. This file can include commands for setting up libraries, reading constraints, and configuring other essential options, streamlining the setup process for Design Compiler.
+
+
+[text](https://www.gibbard.me/tcl_script_cheatsheet/)
