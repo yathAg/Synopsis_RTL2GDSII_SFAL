@@ -313,36 +313,126 @@ The typical workflow for synthesis in Design Compiler is as follows:
    ```tcl
    write -format ddc -output <output_filename>.ddc
    ```
-![alt text](<Screenshot 2024-11-05 115211.png>)
+![alt text](<_docs\synthesisP6_1.png>)
 </details>
 
 <details>
 <summary> 🛠️Using Design Vision (GUI)</summary>
 
 1. Start C-shell:
+
    ```csh
    csh
    ```
+
 2. Launch Design Vision GUI:
+
    ```csh
    design_vision
    ```
+
 3. Initialize the GUI:
+
    ```tcl
    start_gui
    ```
+
 4. Read the DDC file (if available):
+
    ```tcl
    read_ddc <design_name>.ddc
    ```
-   ![alt text](<Screenshot 2024-11-05 115133.png>)
+
+   ![alt text](<_docs\synthesisP6_2.png>)
+
 </details>
 
 ### ⭐ Automating Tasks with `.synopsys_dc.setup`
 
 The `.synopsys_dc.setup` file can be created in the user directory to store common setup commands and automate repetitive tasks. This file can include commands for setting up libraries, reading constraints, and configuring other essential options, streamlining the setup process for Design Compiler.
 
-### TCL Scripting 
+### ⭐ TCL Scripting
 
+TCL (Tool Command Language) is a powerful scripting language widely used in EDA tools like Synopsys Design Compiler to automate and customize synthesis processes. It enables you to write scripts for automating tasks, setting constraints, and querying design data, thus enhancing productivity and efficiency. For a quick reference on common commands and syntax, check out this [TCL script cheat sheet](https://www.gibbard.me/tcl_script_cheatsheet/).
 
-[text](https://www.gibbard.me/tcl_script_cheatsheet/)
+### ⭐ Static Timing Analysis (STA)
+
+Static Timing Analysis (STA) is a method used to verify the timing performance of a digital circuit without requiring simulation. It calculates the timing of a design by analyzing the paths between input and output pins, ensuring that all timing constraints are met. Timing constraints are critical in defining the operational limits of a circuit and are essential for the correct functioning of the synthesized design.
+
+#### Timing Constraints
+
+Setup and hold constraints are two fundamental timing requirements in STA. Setup constraints specify the **maximum delay** allowed for data to propagate through combinational logic before being captured by a flip-flop. This ensures that data arrives and is stable before the clock edge triggers the capturing flip-flop, thus preventing setup violations. On the other hand, hold constraints specify the **minimum delay** required for data to remain stable after the clock edge. They ensure that data is held long enough to be correctly captured by the flip-flop, preventing hold violations. Both constraints are crucial for determining the allowable delays in the data path.
+
+#### Delay Calculation
+
+The delay in a circuit depends on several factors, primarily the characteristics of the cells used and the fanout of the signals. **Cell delay** is the intrinsic delay associated with a cell, as provided in the standard cell library. **Fanout** refers to the number of gates driven by a signal, which affects the load capacitance and, consequently, the delay. Accurate delay calculation is essential for meeting the timing constraints and ensuring reliable circuit operation.
+
+#### Timing Paths
+
+Understanding timing paths is essential for effective STA. Timing paths are the routes that signals take from one point to another in a circuit. The main types of timing paths include:
+
+- **Register-to-Register Paths**: Data paths between flip-flops.
+- **Input-to-Register Paths**: Paths from input ports to flip-flops.
+- **Register-to-Output Paths**: Paths from flip-flops to output ports.
+- **Input-to-Output Paths**: Combinational paths from input ports directly to output ports.
+
+Analyzing these paths helps in identifying critical paths and optimizing the design to meet the specified clock constraints.
+
+#### Clock Modeling
+
+Accurate clock modeling is vital for correct timing analysis. It involves defining the clock period, waveform, and transitions, including the rise and fall times of the clock signal. Output loads, such as load capacitances on clock outputs, also affect the delay and must be considered. Proper clock modeling ensures that the synthesis tool can optimize the combinational logic based on the specified clock.
+
+#### I/O Modeling
+
+Input/Output (I/O) modeling addresses both external and internal path delays. **External path delays** refer to delays outside the chip, such as board or interconnect delays, while **internal path delays** are delays within the chip, between the I/O pins and internal logic. Modeling these delays provides better directives to the compiler, enabling it to optimize the design more effectively.
+
+#### Pin Unateness
+
+Unateness describes the relationship between the input and output transitions of a cell. A pin is **positive unate** if a rising input causes a rising output and **negative unate** if a rising input causes a falling output. Understanding the unateness of pins is crucial for determining how transitions propagate through the logic, which affects timing analysis and optimization.
+
+#### Library Characteristics
+
+Standard cell libraries use **lookup tables** to provide delay values based on different load capacitances and input transition times. These tables allow the synthesis tool to calculate accurate delays for various conditions. **Timing types for sequential gates** define the behavior of sequential elements, including setup and hold times, which are essential for timing analysis.
+
+<details>
+<summary> 🛠️Querying Properties in Synopsys Design Compiler</summary>
+
+Using Synopsys DC, you can query and manipulate various properties of libraries and cells to aid in synthesis and analysis. For instance, to list all loaded libraries, you can use the `list_lib` command. To retrieve all sequential cells in the loaded libraries, the following command can be used:
+
+```tcl
+get_lib_cells * -filter "is_sequential==true"
+```
+
+To get all cells with names containing "and," you can use:
+
+```tcl
+get_lib_cells */*and*
+```
+
+You can iterate over these cells and perform actions using a loop:
+
+```tcl
+foreach_in_collection my_lib_cell [get_lib_cells */*and*] {
+    set my_lib_cell_name [get_object_name $my_lib_cell]
+    echo $my_lib_cell_name
+}
+```
+
+To view all pins of a specific cell, use:
+
+```tcl
+get_lib_pins <cellname>/*
+```
+
+And to iterate over the pins to get their names and directions:
+
+```tcl
+foreach_in_collection my_pins [get_lib_pins <cellname>/*] {
+    set my_pin_name [get_object_name $my_pins]
+    set pin_dir [get_lib_attribute $my_pin_name direction]
+}
+```
+
+Replace `<cellname>` with the actual name of the cell you are inspecting. By leveraging these commands, you can extract valuable information about cells and their properties, facilitating better synthesis and optimization of your design.
+
+</details>
