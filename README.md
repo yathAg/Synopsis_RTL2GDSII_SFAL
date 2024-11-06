@@ -400,29 +400,36 @@ Standard cell libraries use **lookup tables** to provide delay values based on d
 Using Synopsys DC, you can query and manipulate various properties of libraries and cells to aid in synthesis and analysis. For instance, to list all loaded libraries, you can use the `list_lib` command. To retrieve all sequential cells in the loaded libraries, the following command can be used:
 
 ```tcl
-get_lib_cells * -filter "is_sequential==true"
+get_lib_cells */* -filter "is_sequential==true"
 ```
 
-To get all cells with names containing "and," you can use:
+![!\[alt text\](image.png)](_docs/SynthesisP7_1.png)
+To get all cells with names containing "an" you can use: 
 
 ```tcl
-get_lib_cells */*and*
+get_lib_cells */*an*
 ```
+
+This corresponds to and gates and gates with similar functionality.
 
 You can iterate over these cells and perform actions using a loop:
 
 ```tcl
-foreach_in_collection my_lib_cell [get_lib_cells */*and*] {
+foreach_in_collection my_lib_cell [get_lib_cells */*an*] {
     set my_lib_cell_name [get_object_name $my_lib_cell]
     echo $my_lib_cell_name
 }
 ```
+
+![alt text](_docs/SynthesisP7_2.png)
 
 To view all pins of a specific cell, use:
 
 ```tcl
 get_lib_pins <cellname>/*
 ```
+
+![_docs/SynthesisP7_3.png](_docs/SynthesisP7_3.png)
 
 And to iterate over the pins to get their names and directions:
 
@@ -434,5 +441,17 @@ foreach_in_collection my_pins [get_lib_pins <cellname>/*] {
 ```
 
 Replace `<cellname>` with the actual name of the cell you are inspecting. By leveraging these commands, you can extract valuable information about cells and their properties, facilitating better synthesis and optimization of your design.
+
+To list specific properties we can use the following:
+
+```tcl
+get_lib_attribute <cellname>/* <attribute>
+```
+
+![!\[alt text\](image-2.png)](_docs/SynthesisP7_4.png)
+
+> Note attributes are pin or cell dependant as shown for capacitance
+
+All attributes can be listed using `list_attribute -app` they can also be found in [this document](_docs/scl180_reference/scl180_attributelist.txt)
 
 </details>
