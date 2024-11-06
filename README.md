@@ -293,7 +293,7 @@ The typical workflow for synthesis in Design Compiler is as follows:
    ```tcl
    read_db <path_to_database>
    set target_library <path_to_target_library>
-   set link_library [* <path_to_link_library>]
+   set link_library {* <path_to_link_library>}
    ```
    > The `set link_library [* <path>]` option ensures that the library is not overwritten.
 
