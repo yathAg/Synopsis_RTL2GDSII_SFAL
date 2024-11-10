@@ -13,7 +13,7 @@ To run the `hkspi` testbench, follow these steps:
 1. Export the following environment variables:
 
     ```bash
-    export GCC_PATH=<path_riscv_to_gcc>
+    export GCC_PATH=<path_to_riscv_gcc>
     export GCC_PREFIX=<gcc_prefix>
     export SCL_PDK_PATH=<path_to_scl_pdk>
     ```
