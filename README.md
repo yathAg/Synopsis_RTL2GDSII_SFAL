@@ -1,4 +1,4 @@
-# Synopsis_RTL2GDSII_SFAL
+# Synopsys_RTL2GDSII_SFAL
 
 Digital chip design transforms a high-level functional description into a manufacturable physical chip. The process follows key steps: starting with **specification**, followed by **RTL design** using hardware description languages like Verilog or VHDL, **verification**, **synthesis** into a gate-level netlist, **place and route (PnR)**, and final **timing, power, and physical verification** before the chip is ready for fabrication.
 
