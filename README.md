@@ -52,7 +52,7 @@ This project uses several essential tools to facilitate the digital chip design 
 
    </details>
 
-## Synthesis
+## Synthesis Introduction
 
 Synthesis in digital VLSI design is the process of translating high-level hardware description language (HDL) code, often in RTL (Register Transfer Level) form, into a gate-level netlist. This netlist represents the circuit in terms of basic logic gates and components. Synthesis tools ensure that the design meets specific constraints, such as timing, area, and power, to facilitate the physical implementation.
 
@@ -455,3 +455,11 @@ get_lib_attribute <cellname>/* <attribute>
 All attributes can be listed using `list_attribute -app` they can also be found in [this document](_docs/scl180_reference/scl180_attributelist.txt)
 
 </details>
+
+## Caravel RISC-V Core
+
+Caravel is a RISC-V core designed by Efabless. For more details, please refer to the main README [here](caravel/README.md).
+
+### ⭐ Functional Simulation
+
+Work in Progress (WIP). Current simulation details can be found [here](caravel/README.md).
