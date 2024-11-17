@@ -1,0 +1,5 @@
+pdk/scl180/stdlib
+pdk/scl180/iolib
+/*.log
+/*.svf
+/*.txt

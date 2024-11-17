@@ -16,16 +16,13 @@
 
 VERILOG_PATH = ..
 RTL_PATH = ../../rtl
+
+SCL_PDK_PATH ?= /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180
+
 RISCV_TYPE ?= rv32imc
-
-
-SCL_PDK_PATH ?=
-SCL_WRAPPER_PATH = ../../pdk/scl180/
-SKY130_PDK_PATH = ../../pdk/sky130_fd_sc_hvl/
-
 FIRMWARE_PATH = ..
-GCC_PATH?=/opt/riscv/bin
-GCC_PREFIX?=riscv64-unknown-elf
+GCC_PATH?=/home/yatharth/riscv_gcc
+GCC_PREFIX?=riscv32-unknown-elf
 
 SIM_DEFINES = -DFUNCTIONAL -DSIM
 
@@ -41,10 +38,9 @@ hex:  ${PATTERN:=.hex}
 	iverilog -Ttyp $(SIM_DEFINES) \
 	-I $(FIRMWARE_PATH) \
 	-I $(RTL_PATH) \
-	-I $(SCL_WRAPPER_PATH)  \
+	-I $(SCL_PDK_PATH)  \
 	-I $(SCL_PDK_PATH)/stdlib/fs120/verilog/vcs_sim_model/ \
 	-I $(SCL_PDK_PATH)/iolib/cio150/verilog/tsl18cio150/zero/ \
-	-I $(SKY130_PDK_PATH) \
 	$< -o $@ 
 
 %.vcd: %.vvp

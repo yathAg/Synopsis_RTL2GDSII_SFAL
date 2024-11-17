@@ -1,0 +1,119 @@
+[SCL] 11/17/2024 03:24:27 PID:18803 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
+[SCL] 11/17/2024 03:24:28 PID:18803 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
+[SCL] 11/17/2024 03:24:29 Checking status for feature Design-Compiler
+[SCL] 11/17/2024 03:24:29 PID:18803 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
+[SCL] 11/17/2024 03:24:29 PID:18803 Client:sfalvsd Authorization failed Synopsys 2022.03
+[SCL] 11/17/2024 03:24:29 PID:18803 Client:sfalvsd Authorization failed DC-Debug 2022.03
+[SCL] 11/17/2024 03:24:29 PID:18803 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+              Version T-2022.03-SP5-6 for linux64 - Sep 20, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+[SCL] 11/17/2024 03:24:30 PID:18803 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
+Initializing gui preferences from file  /home/yatharth/.synopsys_dc_gui/preferences.tcl
+# Define the target and link libraries
+set target_library "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db"
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db
+# set link_library "/path/to/link_library.lib"
+# Specify the input Verilog directory and output paths
+set verilog_folder "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl"
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl
+set verilog_folder_wrapper "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180"
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180
+set output_file "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/output_file.v"
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/output_file.v
+set report_file "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/qor_report.rpt"
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/qor_report.rpt
+# Define the top-level module name
+set top_module "caravel_core" ;# Replace with your top module name
+caravel_core
+# Load the target and link libraries
+set_app_var target_library $target_library
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db
+# set_app_var link_library "* $link_library"
+set_app_var link_library "* $target_library"
+* /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db
+# # Read all Verilog files in the specified directory
+# foreach file [glob -nocomplain "$verilog_folder_wrapper/*.v"] {
+#     read_verilog $file
+# }
+# # Read all Verilog files in the specified directory
+# foreach file [glob -nocomplain "$verilog_folder/*.v"] {
+#     read_verilog $file
+# }
+# Collect all Verilog files for analysis
+set verilog_files [glob -nocomplain "$verilog_folder_wrapper/*.v"] 
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v
+append verilog_files " [glob -nocomplain \"$verilog_folder/*.v\"]"
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v 
+# Analyze all Verilog files (parsing only)
+analyze -format verilog $verilog_files
+Running PRESTO HDLC
+[SCL] 11/17/2024 03:24:30 Checking status for feature HDL-Compiler
+[SCL] 11/17/2024 03:24:30 PID:18803 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v
+Opening include file pc3b03ed.v
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v:1: Unable to open file `pc3b03ed.v': No such file or directory. (VER-41)
+*** Presto compilation terminated with 1 errors. ***
+Loading db file '/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db'
+0
+# Elaborate and link the design
+elaborate $top_module
+Loading db file '/usr/synopsys/syn/T-2022.03-SP5-6/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/T-2022.03-SP5-6/libraries/syn/standard.sldb'
+  Loading link library 'tsl18fs120_scl_ff'
+  Loading link library 'gtech'
+Error: Cannot find the design 'caravel_core' in the library 'WORK'. (LBR-0)
+0
+link
+Error: Current design is not defined. (UID-4)
+0
+# Run compile_ultra for optimization
+compile_ultra -gate_clock
+Error: Current design is not defined. (UID-4)
+0
+# Write out the synthesized netlist
+write -format verilog -hierarchy -output $output_file
+Error: No files or designs were specified. (UID-22)
+0
+# Generate and save the QoR (Quality of Results) report
+report_qor -hierarchical -output $report_file
+Error: unknown option '-hierarchical' (CMD-010)
+Error: unknown option '-output' (CMD-010)
+Error: extra positional option '/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/qor_report.rpt' (CMD-012)
+# Exit the DC Shell
+quit
+
+Memory usage for this session 156 Mbytes.
+Memory usage for this session including child processes 156 Mbytes.
+CPU usage for this session 5 seconds ( 0.00 hours ).
+Elapsed time for this session 9 seconds ( 0.00 hours ).
+
+Thank you...
