@@ -1,10 +1,10 @@
-[SCL] 11/17/2024 03:58:44 PID:25149 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
-[SCL] 11/17/2024 03:58:45 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
-[SCL] 11/17/2024 03:58:46 Checking status for feature Design-Compiler
-[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
-[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Authorization failed Synopsys 2022.03
-[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Authorization failed DC-Debug 2022.03
-[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
+[SCL] 11/17/2024 06:35:33 PID:29498 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
+[SCL] 11/17/2024 06:35:34 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
+[SCL] 11/17/2024 06:35:35 Checking status for feature Design-Compiler
+[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
+[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Authorization failed Synopsys 2022.03
+[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Authorization failed DC-Debug 2022.03
+[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
 
                            Design Compiler Graphical 
                                  DC Ultra (TM)
@@ -36,7 +36,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-[SCL] 11/17/2024 03:58:47 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
+[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
 Initializing gui preferences from file  /home/yatharth/.synopsys_dc_gui/preferences.tcl
 # Define the target and link libraries
 set target_library "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db"
@@ -62,30 +62,17 @@ set_app_var link_library "* $target_library"
 * /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db
 # Collect all Verilog files for analysis
 set verilog_files [glob -nocomplain "$verilog_folder_wrapper/*.v"] 
-/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v
 append verilog_files " [glob -nocomplain \"$verilog_folder/*.v\"]"
-/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v 
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v 
 # Set the include search path for files with `include` directives
 set search_path "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero"
 /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero
 # Analyze all Verilog files (parsing only)
 analyze -format verilog $verilog_files
 Running PRESTO HDLC
-[SCL] 11/17/2024 03:58:48 Checking status for feature HDL-Compiler
-[SCL] 11/17/2024 03:58:48 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
-Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v
-Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:24: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:25: The '`enable_portfaults' directive is not supported and will be ignored. (VER-939)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:33: The '`delay_mode_path' directive is not supported and will be ignored. (VER-939)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:55: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:70: The '`disable_portfaults' directive is not supported and will be ignored. (VER-939)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:71: The '`nosuppress_faults' directive is not supported and will be ignored. (VER-939)
-Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:46: tri0 declarations are not supported by synthesis. (VER-181)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:49: The delay specification for gate instantiation is ignored. (VER-970)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:50: The delay specification for tri-state gate instantiation is ignored. (VER-971)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:50: Drive strength specification for tri-state gate instantiation is ignored. (VER-306)
-Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:51: The delay specification for tri-state gate instantiation is ignored. (VER-971)
+[SCL] 11/17/2024 06:35:36 Checking status for feature HDL-Compiler
+[SCL] 11/17/2024 06:35:36 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
 Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v
 Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v:24: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
@@ -94,6 +81,7 @@ Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iol
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v:46: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v:56: The '`disable_portfaults' directive is not supported and will be ignored. (VER-939)
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v:57: The '`nosuppress_faults' directive is not supported and will be ignored. (VER-939)
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v:42: The delay specification for gate instantiation is ignored. (VER-970)
 Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v
 Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:24: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
@@ -102,9 +90,11 @@ Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iol
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:48: The construct 'specify' is not supported in synthesis; it is ignored. (VER-708)
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:61: The '`disable_portfaults' directive is not supported and will be ignored. (VER-939)
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:62: The '`nosuppress_faults' directive is not supported and will be ignored. (VER-939)
-*** Presto compilation terminated with 1 errors. ***
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:43: The delay specification for gate instantiation is ignored. (VER-970)
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:44: The delay specification for tri-state gate instantiation is ignored. (VER-971)
+Presto compilation completed successfully.
 Loading db file '/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db'
-0
+1
 # Elaborate and link the design
 elaborate $top_module
 Loading db file '/usr/synopsys/syn/T-2022.03-SP5-6/libraries/syn/gtech.db'
