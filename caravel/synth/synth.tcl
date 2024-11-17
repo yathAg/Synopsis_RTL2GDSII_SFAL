@@ -9,27 +9,19 @@ set output_file "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/syn
 set report_file "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/qor_report.rpt"
 
 # Define the top-level module name
-set top_module "caravel_core" ;# Replace with your top module name
+set top_module "caravel" ;# Replace with your top module name
 
 # Load the target and link libraries
 set_app_var target_library $target_library
 # set_app_var link_library "* $link_library"
 set_app_var link_library "* $target_library"
 
-
-# # Read all Verilog files in the specified directory
-# foreach file [glob -nocomplain "$verilog_folder_wrapper/*.v"] {
-#     read_verilog $file
-# }
-
-# # Read all Verilog files in the specified directory
-# foreach file [glob -nocomplain "$verilog_folder/*.v"] {
-#     read_verilog $file
-# }
-
 # Collect all Verilog files for analysis
 set verilog_files [glob -nocomplain "$verilog_folder_wrapper/*.v"] 
 append verilog_files " [glob -nocomplain \"$verilog_folder/*.v\"]"
+
+# Set the include search path for files with `include` directives
+set search_path "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero"
 
 # Analyze all Verilog files (parsing only)
 analyze -format verilog $verilog_files
