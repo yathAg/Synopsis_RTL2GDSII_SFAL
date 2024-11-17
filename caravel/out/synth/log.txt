@@ -1,10 +1,10 @@
-[SCL] 11/17/2024 03:52:04 PID:24015 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
-[SCL] 11/17/2024 03:52:05 PID:24015 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
-[SCL] 11/17/2024 03:52:06 Checking status for feature Design-Compiler
-[SCL] 11/17/2024 03:52:06 PID:24015 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
-[SCL] 11/17/2024 03:52:06 PID:24015 Client:sfalvsd Authorization failed Synopsys 2022.03
-[SCL] 11/17/2024 03:52:06 PID:24015 Client:sfalvsd Authorization failed DC-Debug 2022.03
-[SCL] 11/17/2024 03:52:06 PID:24015 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
+[SCL] 11/17/2024 03:58:44 PID:25149 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
+[SCL] 11/17/2024 03:58:45 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
+[SCL] 11/17/2024 03:58:46 Checking status for feature Design-Compiler
+[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
+[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Authorization failed Synopsys 2022.03
+[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Authorization failed DC-Debug 2022.03
+[SCL] 11/17/2024 03:58:46 PID:25149 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
 
                            Design Compiler Graphical 
                                  DC Ultra (TM)
@@ -36,7 +36,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-[SCL] 11/17/2024 03:52:06 PID:24015 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
+[SCL] 11/17/2024 03:58:47 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
 Initializing gui preferences from file  /home/yatharth/.synopsys_dc_gui/preferences.tcl
 # Define the target and link libraries
 set target_library "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db"
@@ -71,8 +71,8 @@ set search_path "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl
 # Analyze all Verilog files (parsing only)
 analyze -format verilog $verilog_files
 Running PRESTO HDLC
-[SCL] 11/17/2024 03:52:07 Checking status for feature HDL-Compiler
-[SCL] 11/17/2024 03:52:07 PID:24015 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
+[SCL] 11/17/2024 03:58:48 Checking status for feature HDL-Compiler
+[SCL] 11/17/2024 03:58:48 PID:25149 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
 Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3b03ed_wrapper.v
 Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3b03ed.v:24: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
@@ -106,24 +106,35 @@ Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iol
 Loading db file '/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db'
 0
 # Elaborate and link the design
-# elaborate $top_module
-# link
-# # Run compile_ultra for optimization
-# compile_ultra -gate_clock
-# # Write out the synthesized netlist
-# write -format verilog -hierarchy -output $output_file
-# # Generate and save the QoR (Quality of Results) report
-# report_qor -hierarchical -output $report_file
-# # Exit the DC Shell
-# quit
-dc_shell> link 
+elaborate $top_module
+Loading db file '/usr/synopsys/syn/T-2022.03-SP5-6/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/T-2022.03-SP5-6/libraries/syn/standard.sldb'
+  Loading link library 'tsl18fs120_scl_ff'
+  Loading link library 'gtech'
+Error: Cannot find the design 'caravel' in the library 'WORK'. (LBR-0)
+0
+link
 Error: Current design is not defined. (UID-4)
 0
-dc_shell> quit 
+# Run compile_ultra for optimization
+compile_ultra -gate_clock
+Error: Current design is not defined. (UID-4)
+0
+# Write out the synthesized netlist
+write -format verilog -hierarchy -output $output_file
+Error: No files or designs were specified. (UID-22)
+0
+# Generate and save the QoR (Quality of Results) report
+report_qor -hierarchical -output $report_file
+Error: unknown option '-hierarchical' (CMD-010)
+Error: unknown option '-output' (CMD-010)
+Error: extra positional option '/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/out/synth/qor_report.rpt' (CMD-012)
+# Exit the DC Shell
+quit
 
 Memory usage for this session 156 Mbytes.
 Memory usage for this session including child processes 156 Mbytes.
 CPU usage for this session 5 seconds ( 0.00 hours ).
-Elapsed time for this session 352 seconds ( 0.10 hours ).
+Elapsed time for this session 8 seconds ( 0.00 hours ).
 
 Thank you...
