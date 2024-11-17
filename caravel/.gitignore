@@ -3,3 +3,7 @@ pdk/scl180/iolib
 /*.log
 /*.svf
 /*.txt
+
+/*.pvl
+/*.syn
+/*.mr
