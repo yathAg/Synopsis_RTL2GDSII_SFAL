@@ -27,7 +27,7 @@
  */
 
 `include "mgmt_core.v"
-`default_nettype none
+`default_nettype wire
 
 `ifndef _MGMT_CORE_WRAPPER_
 `define _MGMT_CORE_WRAPPER_

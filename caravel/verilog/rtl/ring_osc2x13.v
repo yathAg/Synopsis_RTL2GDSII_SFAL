@@ -1,4 +1,4 @@
-`include "tsl18fs120_scl.v"
+// `include "tsl18fs120_scl.v"
 `include "dummy_scl180_conb_1.v"
 // SPDX-FileCopyrightText: 2020 Efabless Corporation
 //
@@ -15,7 +15,7 @@
 // limitations under the License.
 // SPDX-License-Identifier: Apache-2.0
 
-`default_nettype none
+`default_nettype wire
 // Tunable ring oscillator---synthesizable (physical) version.
 //
 // NOTE:  This netlist cannot be simulated correctly due to lack

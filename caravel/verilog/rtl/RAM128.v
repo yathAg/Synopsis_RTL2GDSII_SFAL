@@ -1,3 +1,5 @@
+`default_nettype wire
+
 module RAM128 (
     input CLK,
     input EN0,

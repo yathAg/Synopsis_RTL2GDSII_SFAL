@@ -14,7 +14,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 
-VERILOG_PATH = ..
 RTL_PATH = ../../rtl
 
 SCL_PDK_PATH ?= /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180
@@ -38,6 +37,7 @@ hex:  ${PATTERN:=.hex}
 	iverilog -Ttyp $(SIM_DEFINES) \
 	-I $(FIRMWARE_PATH) \
 	-I $(RTL_PATH) \
+	-I $(RTL_PATH)/temp \
 	-I $(SCL_PDK_PATH)  \
 	-I $(SCL_PDK_PATH)/stdlib/fs120/verilog/vcs_sim_model/ \
 	-I $(SCL_PDK_PATH)/iolib/cio150/verilog/tsl18cio150/zero/ \

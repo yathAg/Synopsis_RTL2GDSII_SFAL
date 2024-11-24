@@ -2,13 +2,18 @@
 DC_SHELL = dc_shell       # Path to Synopsys DC Shell executable
 TCL_SCRIPT = ./synth/synth.tcl  # Name of your TCL script
 LOG_FILE = ./out/synth/log.txt            # Log file to capture output
+ERROR_LOG_FILE = ./out/synth/log_error.txt  # Error log file
 
 # Default target
-all: run_synthesis
+all: run_synthesis error_log
 
 # Target to run the synthesis
 run_synthesis:
 	$(DC_SHELL) -f $(TCL_SCRIPT) | tee $(LOG_FILE)
+
+# Target to extract errors into log_error
+error_log: $(LOG_FILE)
+	grep "^Error:" $(LOG_FILE) > $(ERROR_LOG_FILE)
 
 # Target to clean generated files
 clean:

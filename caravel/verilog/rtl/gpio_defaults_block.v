@@ -14,7 +14,7 @@
 // limitations under the License.
 // SPDX-License-Identifier: Apache-2.0
 
-`default_nettype none
+`default_nettype wire
 
 // This module represents an unprogrammed set of GPIO pad default
 // values that is configured with via programming on the chip top
