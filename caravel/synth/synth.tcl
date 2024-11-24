@@ -17,8 +17,7 @@ set_app_var target_library $target_library
 set_app_var link_library "* $target_library"
 
 # Collect all Verilog files for analysis
-set verilog_files [glob -nocomplain "$verilog_folder_wrapper/*.v"] 
-append verilog_files " [glob -nocomplain \"$verilog_folder/*.v\"]"
+set verilog_files [concat [glob -nocomplain "$verilog_folder_wrapper/*.v"] [glob -nocomplain "$verilog_folder/*.v"]]
 
 # Set the include search path for files with `include` directives
 set search_path "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero"

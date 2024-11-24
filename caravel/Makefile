@@ -13,3 +13,9 @@ run_synthesis:
 # Target to clean generated files
 clean:
 	rm -f $(LOG_FILE) /path/to/output_file.v /path/to/qor_report.rpt
+	rm -f *.log
+	rm -f *.pvl
+	rm -f *.syn
+	rm -f *.mr
+
+

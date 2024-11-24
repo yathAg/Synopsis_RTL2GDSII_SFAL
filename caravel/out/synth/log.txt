@@ -1,10 +1,10 @@
-[SCL] 11/17/2024 06:35:33 PID:29498 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
-[SCL] 11/17/2024 06:35:34 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
-[SCL] 11/17/2024 06:35:35 Checking status for feature Design-Compiler
-[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
-[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Authorization failed Synopsys 2022.03
-[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Authorization failed DC-Debug 2022.03
-[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
+[SCL] 11/24/2024 03:42:18 PID:18941 Client:sfalvsd Authorization failed Synopsys-Release 2022.03
+[SCL] 11/24/2024 03:42:19 PID:18941 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded Design-Compiler 2022.03
+[SCL] 11/24/2024 03:42:19 Checking status for feature Design-Compiler
+[SCL] 11/24/2024 03:42:19 PID:18941 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded Design-Compiler 2022.03
+[SCL] 11/24/2024 03:42:19 PID:18941 Client:sfalvsd Authorization failed Synopsys 2022.03
+[SCL] 11/24/2024 03:42:19 PID:18941 Client:sfalvsd Authorization failed DC-Debug 2022.03
+[SCL] 11/24/2024 03:42:20 PID:18941 Client:sfalvsd Authorization failed DC-NXT-DPX-Beta 2022.03
 
                            Design Compiler Graphical 
                                  DC Ultra (TM)
@@ -36,7 +36,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-[SCL] 11/17/2024 06:35:35 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
+[SCL] 11/24/2024 03:42:20 PID:18941 Client:sfalvsd Server:2021@3.7.156.91 Authorization succeeded DC-Expert 2022.03
 Initializing gui preferences from file  /home/yatharth/.synopsys_dc_gui/preferences.tcl
 # Define the target and link libraries
 set target_library "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db"
@@ -61,18 +61,16 @@ set_app_var target_library $target_library
 set_app_var link_library "* $target_library"
 * /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db
 # Collect all Verilog files for analysis
-set verilog_files [glob -nocomplain "$verilog_folder_wrapper/*.v"] 
-/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v
-append verilog_files " [glob -nocomplain \"$verilog_folder/*.v\"]"
-/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v 
+set verilog_files [concat [glob -nocomplain "$verilog_folder_wrapper/*.v"] [glob -nocomplain "$verilog_folder/*.v"]]
+/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pt3b02_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/RAM128.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/RAM256.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebug.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebugCache.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/buff_flash_clkrst.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_clocking.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_logo.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_motto.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_netlists.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_openframe.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_power_routing.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/chip_io.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/clock_div.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/constant_block.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/copyright_block.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/copyright_block_a.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/defines.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/digital_pll.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/digital_pll_controller.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/dummy_scl180_conb_1.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/empty_macro.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/gpio_control_block.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/gpio_defaults_block.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/gpio_logic_high.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/gpio_signal_buffering.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/gpio_signal_buffering_alt.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/housekeeping.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/housekeeping_spi.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/ibex_all.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/manual_power_connections.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mgmt_core.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mgmt_core.w_rst_init_modification.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mgmt_core_wrapper.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mgmt_protect.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mgmt_protect_hv.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mprj2_logic_high.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mprj_io.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mprj_logic_high.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/open_source.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/pads.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/picorv32.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/ring_osc2x13.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/scl180_macro_sparecell.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/simple_por.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/spare_logic_block.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/spiflash.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/user_defines.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/user_id_programming.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/user_id_textblock.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/xres_buf.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/primitives.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/sky130_fd_sc_hvl.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mprj_io_buffer.v /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/__user_project_gpio_example.v
 # Set the include search path for files with `include` directives
 set search_path "/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero"
 /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero
 # Analyze all Verilog files (parsing only)
 analyze -format verilog $verilog_files
 Running PRESTO HDLC
-[SCL] 11/17/2024 06:35:36 Checking status for feature HDL-Compiler
-[SCL] 11/17/2024 06:35:36 PID:29498 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
+[SCL] 11/24/2024 03:42:21 Checking status for feature HDL-Compiler
+[SCL] 11/24/2024 03:42:21 PID:18941 Client:sfalvsd Server:2021@3.7.156.91 Checkout succeeded HDL-Compiler 2022.03
 Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/pc3d01_wrapper.v
 Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pc3d01.v:24: The '`suppress_faults' directive is not supported and will be ignored. (VER-939)
@@ -92,9 +90,62 @@ Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iol
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:62: The '`nosuppress_faults' directive is not supported and will be ignored. (VER-939)
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:43: The delay specification for gate instantiation is ignored. (VER-970)
 Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/iolib/cio150/verilog/tsl18cio150/zero/pt3b02.v:44: The delay specification for tri-state gate instantiation is ignored. (VER-971)
-Presto compilation completed successfully.
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/RAM128.v
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/RAM256.v
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebug.v
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebug.v:718: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebug.v:719: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebugCache.v
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebugCache.v:46: Overwriting existing design element 'VexRiscv' with newer version. (VER-64)
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebugCache.v:749: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Warning:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/VexRiscv_MinDebugCache.v:750: The construct 'declaration initial assignment' is not supported in synthesis; it is ignored. (VER-708)
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/buff_flash_clkrst.v
+Compiling source file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel.v
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/copyright_block.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/copyright_block.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_logo.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_logo.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_motto.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_motto.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/open_source.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/open_source.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/user_id_textblock.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/user_id_textblock.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_netlists.v
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/mprj_io_buffer.v
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/defines.v
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/manual_power_connections.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/manual_power_connections.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/empty_macro.v
+Information:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/empty_macro.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/user_defines.v
+Opening include file /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/defines.v
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:340: Implicit net declaration for 'qspi_enabled' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:341: Implicit net declaration for 'uart_enabled' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:342: Implicit net declaration for 'spi_enabled' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:343: Implicit net declaration for 'debug_mode' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:347: Implicit net declaration for 'ser_tx' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:348: Implicit net declaration for 'ser_rx' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:350: Implicit net declaration for 'spi_sdi' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:351: Implicit net declaration for 'spi_csb' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:352: Implicit net declaration for 'spi_sck' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:353: Implicit net declaration for 'spi_sdo' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:354: Implicit net declaration for 'spi_sdoenb' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:356: Implicit net declaration for 'debug_in' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:357: Implicit net declaration for 'debug_out' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:358: Implicit net declaration for 'debug_oeb' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:374: Implicit net declaration for 'trap' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:534: Implicit net declaration for 'porb_l' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:535: Implicit net declaration for 'ext_clk_sel' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:537: Implicit net declaration for 'pll_clk' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:538: Implicit net declaration for 'pll_clk90' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/verilog/rtl/caravel_core.v:542: Implicit net declaration for 'ext_reset' prohibited by '`default_nettype none' compiler directive. (VER-943)
+Error:  Too many errors; can't continue. (VER-40)
+Error:  Too many errors; can't continue. (VER-40)
+*** Presto compilation terminated with 21 errors. ***
 Loading db file '/home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db'
-1
+0
 # Elaborate and link the design
 elaborate $top_module
 Loading db file '/usr/synopsys/syn/T-2022.03-SP5-6/libraries/syn/gtech.db'

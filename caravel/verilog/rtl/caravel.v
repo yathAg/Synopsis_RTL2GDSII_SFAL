@@ -37,6 +37,7 @@
 `include "caravel_motto.v"
 `include "open_source.v"
 `include "user_id_textblock.v"
+`include "caravel_netlists.v"
 `include "caravel_core.v"
 
 module caravel (
