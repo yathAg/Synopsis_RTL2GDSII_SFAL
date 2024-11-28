@@ -32,7 +32,7 @@ elaborate $top_module
 link
 
 # Run compile_ultra for optimization
-compile_ultra -gate_clock
+compile_ultra
 
 # # Write out the synthesized netlist
 write -format verilog -hierarchy -output $output_file
