@@ -38,7 +38,7 @@
 /*----------------------------------------------------------------------*/
 
 module mgmt_protect (
-/*`ifdef USE_POWER_PINS
+`ifdef USE_POWER_PINS
     inout	  vccd,
     inout	  vssd,
     inout	  vccd1,
@@ -49,7 +49,7 @@ module mgmt_protect (
     inout	  vssa1,
     inout	  vdda2,
     inout	  vssa2,
-`endif*/
+`endif
 
     input 	  caravel_clk,
     input 	  caravel_clk2,
@@ -120,32 +120,32 @@ module mgmt_protect (
 	wire 	    mprj_ack_i_core_bar;
 
         mprj_logic_high mprj_logic_high_inst (
-/*`ifdef USE_POWER_PINS
+`ifdef USE_POWER_PINS
                 .vccd1(vccd1),
                 .vssd1(vssd1),
-`endif*/
+`endif
                 .HI(mprj_logic1)
         );
 
         mprj2_logic_high mprj2_logic_high_inst (
-/*`ifdef USE_POWER_PINS
+`ifdef USE_POWER_PINS
                 .vccd2(vccd2),
                 .vssd2(vssd2),
-`endif*/
+`endif
                 .HI(mprj2_logic1)
         );
 
 	// Logic high in the VDDA (3.3V) domains
 
 	mgmt_protect_hv powergood_check (
-/*`ifdef USE_POWER_PINS
+`ifdef USE_POWER_PINS
 	    .vccd(vccd),
 	    .vssd(vssd),
 	    .vdda1(vdda1),
 	    .vssa1(vssa1),
 	    .vdda2(vdda2),
 	    .vssa2(vssa2),
-`endif */
+`endif
 	    .mprj_vdd_logic1(mprj_vdd_logic1),
 	    .mprj2_vdd_logic1(mprj2_vdd_logic1)
 	);
@@ -161,12 +161,12 @@ module mgmt_protect (
 	assign la_data_in_enable = la_iena_mprj & mprj_logic1[457:330];
 
 	nd02d4 user_to_mprj_in_gates [127:0] (
-/*`ifndef USE_POWER_PINS
+`ifdef USE_POWER_PINS
                 .VPWR(vccd),
                 .VGND(vssd),
                 .VPB(vccd),
                 .VNB(vssd),
-`endif */
+`endif
 		.ZN(la_data_in_mprj_bar),
 		.A1(la_data_out_core),		// may be floating
 		.A2(la_data_in_enable)
@@ -179,12 +179,12 @@ module mgmt_protect (
 	assign user_irq_enable = user_irq_ena & mprj_logic1[460:458];
 
 	nd02d4 user_irq_gates [2:0] (
-/*`ifndef USE_POWER_PINS
+`ifdef USE_POWER_PINS
                 .VPWR(vccd),
                 .VGND(vssd),
                 .VPB(vccd),
                 .VNB(vssd),
-`endif */
+`endif
 		.ZN(user_irq_bar),
 		.A1(user_irq_core),		// may be floating
 		.A2(user_irq_enable)
@@ -198,12 +198,12 @@ module mgmt_protect (
 	assign wb_in_enable = mprj_iena_wb & mprj_logic1[462];
 
 	nd02d4 user_wb_dat_gates [31:0] (
-/*`ifndef USE_POWER_PINS
+`ifdef USE_POWER_PINS
                 .VPWR(vccd),
                 .VGND(vssd),
                 .VPB(vccd),
                 .VNB(vssd),
-`endif */
+`endif
 		.ZN(mprj_dat_i_core_bar),
 		.A1(mprj_dat_i_user),		// may be floating
 		.A2(wb_in_enable)
@@ -212,12 +212,12 @@ module mgmt_protect (
 	assign mprj_dat_i_core = ~mprj_dat_i_core_bar;
 
 	nd02d4 user_wb_ack_gate (
-/*`ifndef USE_POWER_PINS
+`ifdef USE_POWER_PINS
                 .VPWR(vccd),
                 .VGND(vssd),
                 .VPB(vccd),
                 .VNB(vssd),
-`endif*/
+`endif
 		.ZN(mprj_ack_i_core_bar),
 		.A1(mprj_ack_i_user),		// may be floating
 		.A2(wb_in_enable)

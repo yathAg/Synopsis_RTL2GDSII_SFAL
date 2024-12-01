@@ -1,0 +1,231 @@
+Information: Building the design 'chip_io'. (HDL-193)
+Warning: Cannot find the design 'chip_io' in the library 'WORK'. (LBR-1)
+Information: Building the design 'user_project_wrapper'. (HDL-193)
+Warning: Cannot find the design 'user_project_wrapper' in the library 'WORK'. (LBR-1)
+Information: Building the design 'gpio_control_block'. (HDL-193)
+Warning: Cannot find the design 'gpio_control_block' in the library 'WORK'. (LBR-1)
+Information: Building the design 'simple_por'. (HDL-193)
+Warning: Cannot find the design 'simple_por' in the library 'WORK'. (LBR-1)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'caravel_core'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'bufbdf' in 'digital_pll'. (LINK-1)
+Warning: Unable to resolve reference 'bufbdf' in 'digital_pll'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'bufbdf' in 'digital_pll'. (LINK-1)
+Warning: Unable to resolve reference 'bufbdf' in 'digital_pll'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'bufbd7' in 'housekeeping'. (LINK-1)
+Warning: Unable to resolve reference 'bufbd7' in 'housekeeping'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'bufbd7' in 'housekeeping'. (LINK-1)
+Warning: Unable to resolve reference 'bufbd7' in 'housekeeping'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'bufbd7' in 'housekeeping'. (LINK-1)
+Warning: Unable to resolve reference 'bufbd7' in 'housekeeping'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'bufbd7' in 'housekeeping'. (LINK-1)
+Warning: Unable to resolve reference 'bufbd7' in 'housekeeping'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'user_id_programming_00000000'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'user_id_programming_00000000'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'mprj_logic_high'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'mprj_logic_high'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'mprj2_logic_high'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'mprj2_logic_high'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'mgmt_protect_hv'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'mgmt_protect_hv'. (LINK-5)
+Error: Can't find inout port 'VPWR' on reference to 'dummy_scl180_conb_1' in 'mgmt_protect_hv'. (LINK-1)
+Warning: Unable to resolve reference 'dummy_scl180_conb_1' in 'mgmt_protect_hv'. (LINK-5)
+Warning: Unable to resolve reference 'chip_io' in 'caravel'. (LINK-5)
+Warning: Unable to resolve reference 'user_project_wrapper' in 'caravel_core'. (LINK-5)
+Warning: Unable to resolve reference 'gpio_control_block' in 'caravel_core'. (LINK-5)
+Warning: Unable to resolve reference 'simple_por' in 'caravel_core'. (LINK-5)
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	chip_core/clock_ctrl/divider/syncN_reg[0]/CP chip_core/clock_ctrl/divider/syncN_reg[0]/Q chip_core/clock_ctrl/U30/A1 chip_core/clock_ctrl/U30/ZN 
+Information: Timing loop detected. (OPT-150)
+	chip_core/clock_ctrl/divider/syncN_reg[2]/CP chip_core/clock_ctrl/divider/syncN_reg[2]/Q chip_core/clock_ctrl/U23/A1 chip_core/clock_ctrl/U23/ZN chip_core/clock_ctrl/U25/A1 chip_core/clock_ctrl/U25/ZN chip_core/clock_ctrl/U30/A2 chip_core/clock_ctrl/U30/ZN 
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider/syncN_reg[0]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider/syncN_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'QN' on cell 'chip_core/clock_ctrl/divider/syncN_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[0]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'QN' on cell 'chip_core/clock_ctrl/divider2/syncN_reg[1]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/housekeeping/hkspi_disable_reg'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/housekeeping/gpio_configure_reg[3][3]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[5]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[6]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[4]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[2]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'CP' and 'Q' on cell 'chip_core/pll/pll_control/tval_reg[3]'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayen1'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'I' and 'ZN' on cell 'chip_core/pll/ringosc/dstage[0].id/delayenb0'
+         to break a timing loop. (OPT-314)
+ 
+****************************************
+Report : qor
+Design : caravel
+Version: T-2022.03-SP5-6
+Date   : Sun Dec  1 02:01:36 2024
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:               1.00
+  Critical Path Length:          0.00
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         17
+  Hierarchical Port Count:       4125
+  Leaf Cell Count:              58756
+  Buf/Inv Cell Count:            5601
+  Buf Cell Count:                2542
+  Inv Cell Count:                3064
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:     40662
+  Sequential Cell Count:        18094
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:   766292.907405
+  Noncombinational Area:
+                       1084149.522190
+  Buf/Inv Area:          59351.730258
+  Total Buffer Area:         37176.28
+  Total Inverter Area:       22504.75
+  Macro/Black Box Area:      0.000000
+  Net Area:             109640.871536
+  -----------------------------------
+  Cell Area:           1850442.429595
+  Design Area:         1960083.301132
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         60979
+  Nets With Violations:           234
+  Max Trans Violations:             0
+  Max Cap Violations:             234
+  -----------------------------------
+
+
+  Hostname: sfalvsd
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                   22.24
+  Logic Optimization:                 13.71
+  Mapping Optimization:              215.05
+  -----------------------------------------
+  Overall Compile Time:              569.73
+  Overall Compile Wall Clock Time:   594.35
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

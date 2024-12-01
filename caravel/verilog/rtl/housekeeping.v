@@ -1441,4 +1441,4 @@ wire mgmt_gpio_out_9_prebuff, mgmt_gpio_out_14_prebuff, mgmt_gpio_out_15_prebuff
     end
 endmodule	// housekeeping
 
-// `default_nettype wire
+`default_nettype wire

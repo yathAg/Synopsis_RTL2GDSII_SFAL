@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : caravel
+Version: T-2022.03-SP5-6
+Date   : Sun Dec  1 02:01:36 2024
+****************************************
+
+
+Library(s) Used:
+
+    tsl18fs120_scl_ff (File: /home/yatharth/vsd_sfal/Synopsys_RTL2GDSII_SFAL/caravel/pdk/scl180/stdlib/fs120/liberty/lib_flow_ff/tsl18fs120_scl_ff.db)
+
+
+Operating Conditions: tsl18fs120_scl_ff   Library: tsl18fs120_scl_ff
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+caravel                2000000           tsl18fs120_scl_ff
+
+
+Global Operating Voltage = 1.98 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 125.6559 mW   (60%)
+  Net Switching Power  =  82.7034 mW   (40%)
+                         ---------
+Total Dynamic Power    = 208.3593 mW  (100%)
+
+Cell Leakage Power     =   2.9128 uW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential       119.9182            0.1465        1.8942e+06          120.0665  (  57.68%)
+combinational      5.7417           82.3639        1.0187e+06           88.1064  (  42.32%)
+--------------------------------------------------------------------------------------------------
+Total            125.6598 mW        82.5104 mW     2.9128e+06 pW       208.1729 mW
+1

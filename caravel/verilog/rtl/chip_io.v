@@ -17,7 +17,7 @@
 // limitations under the License.
 // SPDX-License-Identifier: Apache-2.0
 
-// `default_nettype wire
+`default_nettype wire
 module chip_io(
 	// Package Pins
 	inout  vddio_pad,		// Common padframe/ESD supply
@@ -28,7 +28,7 @@ module chip_io(
 	inout  vssd_pad,		// Common digital ground
 	inout  vdda_pad,		// Management analog 3.3V supply
 	inout  vssa_pad,		// Management analog ground
-	output  vdda1_pad,		// User area 1 3.3V supply
+	inout  vdda1_pad,		// User area 1 3.3V supply
 	inout  vdda1_pad2,		
 	inout  vdda2_pad,		// User area 2 3.3V supply
 	inout  vssa1_pad,		// User area 1 analog ground
@@ -86,7 +86,6 @@ module chip_io(
 	output flash_io0_di_core,
 	output flash_io1_di_core,
 	// User project IOs
-	// we will be using only mprj_io, mprj_io_out, mprj_io_oeb
 	inout [`MPRJ_IO_PADS-1:0] mprj_io,
 	input [`MPRJ_IO_PADS-1:0] mprj_io_out,
 	input [`MPRJ_IO_PADS-1:0] mprj_io_oeb,

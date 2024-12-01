@@ -31,14 +31,7 @@
 /* the management SoC).						*/
 /*                                                          	*/
 /*--------------------------------------------------------------*/
-
-`include "copyright_block.v"
-`include "caravel_logo.v"
-`include "caravel_motto.v"
-`include "open_source.v"
-`include "user_id_textblock.v"
-`include "caravel_netlists.v"
-`include "caravel_core.v"
+ `default_nettype wire
 
 module caravel (
     // All top-level I/O are package-facing pins
@@ -148,7 +141,6 @@ module caravel (
   wire [`MPRJ_IO_PADS-1:0] mprj_io_one;
 
   // User Project Control (user-facing)
-  // NOT NEEDED
   wire [`MPRJ_IO_PADS-10:0] user_analog_io;
 
   // User Project Control management I/O
@@ -357,8 +349,8 @@ module caravel (
   );
 
 copyright_block copyright_block();
-// caravel_logo caravel_logo();
-// caravel_motto caravel_motto();
+caravel_logo caravel_logo();
+caravel_motto caravel_motto();
 open_source open_source();
 user_id_textblock user_id_textblock();
 
